@@ -1,4 +1,4 @@
-import type { Todo } from '@/types';
+import type { Todo } from '../types';
 
 const STORAGE_KEY = 'todo-app-todos';
 const CATEGORIES_KEY = 'todo-app-categories';

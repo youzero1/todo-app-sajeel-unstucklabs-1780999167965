@@ -1,6 +1,6 @@
 import { Trash2 } from 'lucide-react';
-import type { Todo, FilterType, Priority } from '@/types';
-import TodoItem from '@/components/TodoItem';
+import type { Todo, FilterType, Priority } from '../types';
+import TodoItem from './TodoItem';
 
 type TodoListProps = {
   todos: Todo[];

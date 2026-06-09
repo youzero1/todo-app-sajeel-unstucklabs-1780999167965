@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
-import type { Todo, FilterType, SortType, Priority } from '@/types';
-import { loadTodos, saveTodos, loadCategories, saveCategories } from '@/lib/storage';
-import { generateId, priorityOrder } from '@/lib/utils';
+import type { Todo, FilterType, SortType, Priority } from '../types';
+import { loadTodos, saveTodos, loadCategories, saveCategories } from '../lib/storage';
+import { generateId, priorityOrder } from '../lib/utils';
 
 export function useTodos() {
   const [todos, setTodos] = useState<Todo[]>(() => loadTodos());
@@ -58,20 +58,16 @@ export function useTodos() {
   const filteredAndSorted = (() => {
     let result = [...todos];
 
-    // Search
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase();
       result = result.filter(t => t.text.toLowerCase().includes(q));
     }
 
-    // Status filter
     if (filter === 'active') result = result.filter(t => !t.completed);
     if (filter === 'completed') result = result.filter(t => t.completed);
 
-    // Category filter
     if (categoryFilter !== 'all') result = result.filter(t => t.category === categoryFilter);
 
-    // Sort
     if (sort === 'priority') {
       result.sort((a, b) => priorityOrder(a.priority) - priorityOrder(b.priority));
     } else if (sort === 'alphabetical') {

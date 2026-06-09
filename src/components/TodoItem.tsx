@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Trash2, Edit3, Check, X, Calendar, Tag, Flag } from 'lucide-react';
-import { cn, priorityBg } from '@/lib/utils';
-import type { Todo, Priority } from '@/types';
+import { cn, priorityBg } from '../lib/utils';
+import type { Todo, Priority } from '../types';
 
 type TodoItemProps = {
   todo: Todo;
@@ -133,7 +133,6 @@ export default function TodoItem({ todo, categories, onToggle, onDelete, onEdit,
         todo.completed ? 'border-slate-100 opacity-70' : 'border-slate-200 hover:border-indigo-200 hover:shadow-md'
       )}
     >
-      {/* Checkbox */}
       <button
         onClick={() => onToggle(todo.id)}
         className={cn(
@@ -146,7 +145,6 @@ export default function TodoItem({ todo, categories, onToggle, onDelete, onEdit,
         {todo.completed && <Check className="w-3 h-3 text-white" />}
       </button>
 
-      {/* Content */}
       <div className="flex-1 min-w-0">
         <p className={cn(
           'text-sm font-medium leading-snug break-words',
@@ -174,7 +172,6 @@ export default function TodoItem({ todo, categories, onToggle, onDelete, onEdit,
         </div>
       </div>
 
-      {/* Actions */}
       <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
         <button
           onClick={() => setEditing(true)}

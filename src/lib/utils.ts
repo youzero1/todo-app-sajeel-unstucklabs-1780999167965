@@ -1,5 +1,5 @@
 import { clsx, type ClassValue } from 'clsx';
-import type { Priority } from '@/types';
+import type { Priority } from '../types';
 
 export function cn(...inputs: ClassValue[]): string {
   return clsx(inputs);

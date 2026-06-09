@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Plus, Tag, Flag, Calendar } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import type { Priority } from '@/types';
+import { cn } from '../lib/utils';
+import type { Priority } from '../types';
 
 type AddTodoFormProps = {
   categories: string[];
@@ -49,7 +49,6 @@ export default function AddTodoForm({ categories, onAdd, onAddCategory, onCancel
     >
       <h2 className="font-semibold text-slate-700 text-sm uppercase tracking-wide">New Task</h2>
 
-      {/* Text */}
       <input
         type="text"
         placeholder="What needs to be done?"
@@ -59,7 +58,6 @@ export default function AddTodoForm({ categories, onAdd, onAddCategory, onCancel
         className="w-full px-4 py-3 text-slate-800 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:border-indigo-400 placeholder-slate-400"
       />
 
-      {/* Priority */}
       <div>
         <label className="flex items-center gap-1.5 text-xs font-medium text-slate-500 mb-2">
           <Flag className="w-3.5 h-3.5" /> Priority
@@ -81,7 +79,6 @@ export default function AddTodoForm({ categories, onAdd, onAddCategory, onCancel
         </div>
       </div>
 
-      {/* Category & Due Date */}
       <div className="flex gap-3">
         <div className="flex-1">
           <label className="flex items-center gap-1.5 text-xs font-medium text-slate-500 mb-2">
@@ -134,7 +131,6 @@ export default function AddTodoForm({ categories, onAdd, onAddCategory, onCancel
         </div>
       </div>
 
-      {/* Actions */}
       <div className="flex gap-3 pt-1">
         <button
           type="button"

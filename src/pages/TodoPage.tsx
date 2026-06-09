@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import { useTodos } from '@/hooks/useTodos';
-import Header from '@/components/Header';
-import AddTodoForm from '@/components/AddTodoForm';
-import FilterBar from '@/components/FilterBar';
-import TodoList from '@/components/TodoList';
-import StatsBar from '@/components/StatsBar';
+import { useTodos } from './hooks/useTodos';
+import Header from './components/Header';
+import AddTodoForm from './components/AddTodoForm';
+import FilterBar from './components/FilterBar';
+import TodoList from './components/TodoList';
+import StatsBar from './components/StatsBar';
 
 export default function TodoPage() {
   const hook = useTodos();
