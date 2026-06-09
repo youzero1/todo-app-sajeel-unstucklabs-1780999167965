@@ -1,12 +1,6 @@
-@import "tailwindcss";
-
-@theme {
-  --color-brand: #6366f1;
-  --color-brand-dark: #4f46e5;
-  --color-brand-light: #e0e7ff;
-  --color-surface: #f8fafc;
-  --color-card: #ffffff;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
   box-sizing: border-box;
