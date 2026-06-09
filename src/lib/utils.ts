@@ -17,6 +17,8 @@ export function priorityColor(priority: Priority): string {
       return 'text-amber-500';
     case 'low':
       return 'text-emerald-500';
+    default:
+      return 'text-slate-500';
   }
 }
 
@@ -28,6 +30,8 @@ export function priorityBg(priority: Priority): string {
       return 'bg-amber-100 text-amber-700';
     case 'low':
       return 'bg-emerald-100 text-emerald-700';
+    default:
+      return 'bg-slate-100 text-slate-700';
   }
 }
 
@@ -36,5 +40,6 @@ export function priorityOrder(priority: Priority): number {
     case 'high': return 0;
     case 'medium': return 1;
     case 'low': return 2;
+    default: return 3;
   }
 }
