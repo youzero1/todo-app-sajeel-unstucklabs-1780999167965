@@ -4,8 +4,7 @@
     "composite": true,
     "noEmit": false,
     "allowImportingTsExtensions": false,
-    "outDir": "./dist",
-    "types": ["node"]
+    "outDir": "./dist"
   },
   "include": ["src"]
 }
